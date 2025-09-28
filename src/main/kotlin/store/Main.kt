@@ -1,15 +1,5 @@
 package store
 
-enum class ProductCategory(){
-    SNACK,
-    FOOD,
-    BEVERAGE,
-    OTHER
+fun main(){
+    println("=== 24시간 학교 편의점 스마트 관리 시스템 ===")
 }
-
-data class Product(
-    val name: String,
-    val price: Double,
-    val category: ProductCategory,
-    val stock: String
-)
