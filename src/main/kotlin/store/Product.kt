@@ -1,27 +1,29 @@
 package store
 
-enum class ProductCategory(){
-    SNACK,
-    FOOD,
-    BEVERAGE,
-    OTHER
+import java.time.LocalDate
+
+//내가 처음 만든 코드
+//enum class ProductCategory(){
+//    SNACK,
+//    FOOD,
+//    BEVERAGE,
+//    OTHER
+//}
+
+//Gemini 방법 - 데이터와 표현을 묶어서 사용자에게 보여줄 이름까지 설정
+enum class ProductCategory(val displayName: String) {
+    SNACK("과자류"),
+    BEVERAGE("음료류"),
+    FOOD("식품류")
 }
 
+// 상품 정보
 data class Product(
     val name: String,
-    val price: Double,
+    val price: Int,
     val category: ProductCategory,
-    val proper: String,
-    var stock: String
+    val optimalStock: Int, // 적정재고
+    var currentStock: Int, // 현재재고
+    val expiryDate: LocalDate? = null // 유통기한 (식품류가 아닌 경우 null)
 )
 
-fun checkProduct(product: Product){
-    var need = 0
-    var inventoryRate = product.stock / product.proper
-    if( inventoryRate <= stockThreshold){
-        need = product.proper - product.stock
-    }
-    println("${product.name}: 현재 ${product.stock}개 -> 적정재고 ${product.proper} (${need}개 발주 필요) [재고율: $inventoryRate%]")
-}
-
-val stockThreshold = 0.3 // 재고 30% 이하 시 발주 알림
