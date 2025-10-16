@@ -17,5 +17,4 @@
 
 2. JAR 파일 실행
 - 생성된 JAR 파일 실행 <pre> java -jar build/libs/convenience-store-system-1.0.0.jar
-
 - 개발 중 빠른 실행 테스트 <pre> ./gradlew run
