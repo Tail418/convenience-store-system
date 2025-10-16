@@ -9,15 +9,13 @@
 4. 오늘 총 매출과 현황을 알려줍니다.
 5. 입력한 데이터를 기반으로 경영 분석 리포트를 작성해줍니다.
 6. 종합 운영되는 현황을 알려주고 시스템을 종료합니다.
-
-{실행방법}
+---
+### 실행방법
 1. 프로젝트 빌드
-- 프로젝트 빌드 (JAR 파일 생성)
-./gradlew build
-- 또는 Windows에서
-gradlew.bat build
+- 프로젝트 빌드 (JAR 파일 생성)<pre> ./gradlew build
+- 또는 Windows에서 <pre> gradlew.bat build
+
 2. JAR 파일 실행
-- 생성된 JAR 파일 실행
-java -jar build/libs/convenience-store-system-1.0.0.jar
-- 개발 중 빠른 실행 테스트
-./gradlew run
+- 생성된 JAR 파일 실행 <pre> java -jar build/libs/convenience-store-system-1.0.0.jar
+
+- 개발 중 빠른 실행 테스트 <pre> ./gradlew run
